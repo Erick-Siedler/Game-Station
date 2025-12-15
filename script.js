@@ -26,7 +26,9 @@
 //menu funcs
 
 function changeLang(){
-    devMSG()
+    if (lang === "english"){
+        lang = "portuguese"
+    }
 }
 
 function changeTheme(){
@@ -152,10 +154,12 @@ function gameOver(){
 //game work funcs
 
 function game1() {
+   
     endgame = false
     actGame = "game1"
     timeoutIDs = [] 
-    
+    gameMSG()
+
     let lightRoundLimit = 20
     let fixedDelay = 1500
     let errors = 0
@@ -291,4 +295,16 @@ function heartDown(errors,hearts){
 
 function devMSG(){
     alert("Under development!!")
+}
+
+function gameMSG(){
+    if (lang === "portuguese"){
+        if (actGame === "game1"){
+            alert("Esse é um jogo de reflexos, você tem 3 vidas, aperte os botões que piscarem antes que elas apagem, boa sorte!")
+        }
+    } else {
+        if (actGame === "game1"){
+             alert("This is a reflex game, you have 3 lives, press the buttons that shine before they turn off, good luck!")
+        }
+    }
 }
