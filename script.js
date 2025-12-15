@@ -107,22 +107,24 @@ function startGame(game){
     } else {
         gameCont0.classList.add("light")
     }
-    if (game === "game1" && actGame === "any"){
+    if (game === "game1"){
+        actGame = "game1"
         where = "game"
         gameCont0.style.zIndex = 3
         selCont.style.zIndex = 2
         gameCont0.style.opacity = 1
         selCont.style.opacity = 0
+        gameMSG()
         game1()
-    } else if (game === "game2" && actGame === "any"){
+    } else if (game === "game2"){
         game2()
-    } else if (actGame === "game1"){
+    } else if (actGame === "game1" && game === "ingame"){
         gameCont0.style.zIndex = 3
         selCont.style.zIndex = 2
         gameCont0.style.opacity = 1
         selCont.style.opacity = 0
         game1()
-    } else if (actGame === "game2"){
+    } else if (actGame === "game2" && game === "ingame"){
         game2()
     }
 }
@@ -161,9 +163,7 @@ function gameOver(){
 function game1() {
    
     endgame = false
-    actGame = "game1"
     timeoutIDs = [] 
-    gameMSG()
 
     let lightRoundLimit = 20
     let fixedDelay = 1500
