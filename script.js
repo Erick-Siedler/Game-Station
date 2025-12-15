@@ -28,7 +28,12 @@
 function changeLang(){
     if (lang === "english"){
         lang = "portuguese"
+        alert("Agora em português")
+    } else {
+        lang = "english"
+        alert("Now in english")
     }
+    
 }
 
 function changeTheme(){
