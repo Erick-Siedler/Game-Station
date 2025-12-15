@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Station</title>
+    <link rel="stylesheet" href="design.css">
+</head>
+<body>
+    <div class="pref-cont" id="pref-cont">
+        <button id="theme-bt" class="bts" onclick="changeTheme()"><img id="themeIMG" src="imgs/night-icon.png"></button>
+        <button id="lan-bt" class="bts" onclick="changeLang()"><img src="imgs/trad-icon.png"></button>
+        <button id="sel-bt" class="bts" onclick="closeMenu()"><img src="imgs/game-icon.png"></button>
+    </div>
+    <div class="container-sel" id="sel-cont">
+        <button id="menu-bt" class="bts" onclick="openMenu()"><img src="imgs/menu-icon.png"></button>
+        <button class="game-bt"  id="game1" onclick="startGame('game1')"><img id="img1" src="imgs/lamp-off.png"></button>
+        <button class="game-bt" id="game2" onclick="startGame('game2')"><img id="img2" src="imgs/brain-icon.png"></button>
+    </div>
+    <div class="game-container" id="game-cont">
+        <div class="bt-container">
+            <button id="start-bt-game" class="bts" onclick="startGame()"><img src="imgs/play-icon.png"></button>
+            <button id="menu-bt-game" class="bts" onclick="openMenu()"><img src="imgs/menu-icon.png"></button>
+            <button id="stop-bt-game" class="bts" onclick="stopGame()"><img src="imgs/stop-icon.png"></button>
+            <button id="change-bt-game" class="bts" onclick="changeGame()"><img src="imgs/change-icon.png"></button>
+        </div>
+        <div class="light-container" id="light-cont">
+            <button class="light-game" id="L1"></button>
+            <button class="light-game" id="L2"></button>
+            <button class="light-game" id="L3"></button>
+            <button class="light-game" id="L4"></button>
+            <button class="light-game" id="L5"></button>
+            <button class="light-game" id="L6"></button>
+            <button class="light-game" id="L7"></button>
+            <button class="light-game" id="L8"></button>
+            <button class="light-game" id="L9"></button>
+        </div>
+        <div class="qual-container">
+            <div class="counter"><div id="counter">0</div></div>
+            <div class="heart" id"life1"></div>
+            <div class="heart" id"life2"></div>
+            <div class="heart" id"life3"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

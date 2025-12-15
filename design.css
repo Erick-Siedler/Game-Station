@@ -1,0 +1,276 @@
+
+/* Menu Related Design*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.pref-cont{
+    position: absolute;
+    z-index: 3;
+    opacity: 1;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    background-color: #1a1a1a;
+    transition: 1s ease;
+}
+.pref-cont button, .container-sel button{
+    position: relative;
+    padding: 5px;
+    max-width: 15%;
+    height: 300px;
+    border-radius: 50%;
+    border: none;
+    transition: 0.5s;
+}
+
+.pref-cont img{
+    max-width: 50%;
+    transition: 2s;
+}
+
+.pref-cont button:hover, .container-sel button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.container-sel{
+    position: absolute;
+    z-index: 2;
+    opacity: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    width: 100%;
+    background-color: #1a1a1a;
+    transition: 1s ease;
+}   
+.container-sel img{
+    max-width: 50%;
+}
+
+.dark{
+    background-color: #1a1a1a;
+}
+.darkText{
+    color: white;
+}
+.light{
+    background-color: rgb(145, 145, 145);
+}
+.lightText{
+    color: #1a1a1a;
+}
+
+/* Game Related Design*/
+
+.game-container{
+    opacity: 0;
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    transition: 1s ease;
+    position: absolute;
+    z-index: 2;
+}
+
+.bt-container, .qual-container{
+   display: flex;
+   flex-direction: column;
+   gap: 100px;
+   width: 30%;
+   align-items: center;
+   justify-content: center;
+}
+
+.bt-container button{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: transparent;
+    transition: 0.5s;
+}
+
+.bt-container button:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+.bt-container img{
+    max-width: 50%;
+}
+
+.light-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding:100px;
+    gap: 100px;
+    max-width: 40%;
+    height: 90vh;
+    background-color: rgb(116, 116, 116);
+    border: #000000ad solid 10px;
+    border-radius: 30px;
+}
+
+.light-game{
+    width:80px;
+    height: 80px;
+    border: transparent;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+}
+.light-game:hover{
+    transform:scale(1.1);
+    transition: 1s;
+}
+
+.counter{
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    font-size: 40px;
+    width: 80px;
+    height: 100px;
+    background-color: rgb(190, 190, 190);
+    border: #000000ad solid 10px;;
+}
+.heart {
+    position: relative;
+    width: 100px;
+    height: 90px;
+    transition: 0.5s;
+    border-radius: 50%;
+    background-color: #505050;
+}
+
+.heart:hover{
+    transform: scale(1.1);
+    transition: 1s;
+}
+
+@media screen and (max-width: 1024px) {
+    *{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    }
+    .pref-cont, .container-sel{
+        padding: 50px;
+    }
+    .pref-cont button, .container-sel button{
+        max-width: 25%;
+        height: 250px;
+    }
+    .pref-cont img, .container-sel img, .bt-container img{
+        max-width: 50%;
+        max-height: 50%;
+    }
+    .light-container{
+        padding:30px;
+        gap: 80px;
+        max-width: 50%;
+    }
+    .light-game{
+        width: 80px;
+        height: 80px;
+        background-color: white;
+    }
+    .bt-container button{
+        width: 90px;
+        height: 100px;
+    }
+    .counter{
+        font-size: 40px;
+        width: 80px;
+        height: 80px;
+    }
+    .heart {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .pref-cont, .container-sel{
+        padding: 50px;
+    }
+    .pref-cont button, .container-sel button{
+        max-width: 25%;
+        height: 180px;
+    }
+    .pref-cont img, .container-sel img, .bt-container img{
+        max-width: 60%;
+        max-height: 60%;
+    }
+    .game-container{
+        padding: 30px;
+    }
+    .bt-container button{
+        width: 80px;
+        height: 90px;
+    }
+    .game-container{
+        gap: 70px;
+    }
+    .light-container{
+        gap: 70px;
+        max-width: 60%;
+    }
+    .light-game{
+        width: 60px;
+        height: 60px;
+        background-color: white;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .pref-cont, .container-sel{
+        padding: 50px;
+        flex-direction: column;
+    }
+    .pref-cont button, .container-sel button{
+        max-width: 55%;
+        height: 200px;
+    }
+    .pref-cont img, .container-sel img, .bt-container img{
+        max-width: 60%;
+        max-height: 60%;
+    }
+    .game-container{
+        padding: 30px;
+        flex-direction: column;
+    }
+    .light-container{
+        max-width: 100%;
+        height: 2000px;
+        padding: 20px;
+        gap: 50px;
+        flex-direction: column;
+    }
+    .light-game{
+        width: 70px;
+        height: 70px;
+    }
+    .bt-container{
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+    }
+    .bt-container img{
+        max-width: 50%;
+    }
+    .qual-container{
+        flex-direction: row;
+        width: 100%;
+        gap: 20px;
+    }
+}
